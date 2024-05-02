@@ -32,13 +32,17 @@ class HomePage extends StatelessWidget {
                 bottomLeft: Radius.circular(35),
                 bottomRight: Radius.circular(35),
               ),
-              gradient: LinearGradient(colors: [
-                Color(0xff9b84fe),
-                Color(0xFFa38bff),
-                Color(0xff937bf7),
-                Color(0xff8968fc),
-                Color(0xff714cf7),
-              ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+              gradient: LinearGradient(
+                colors: [
+                  Color(0xff9b84fe),
+                  Color(0xFFa38bff),
+                  Color(0xff937bf7),
+                  Color(0xff8968fc),
+                  Color(0xff714cf7),
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
             child: Stack(
               children: [
@@ -178,14 +182,16 @@ class HomePage extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 1,
-                              blurRadius: 10)
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ExpansionTile(
                       title: const Text(
                         'About me',
@@ -199,11 +205,12 @@ class HomePage extends StatelessWidget {
                         height: 30,
                       ),
                       trailing: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.deepPurpleAccent.withOpacity(0.1)),
-                          child:
-                              const Icon(Icons.add, color: Colors.deepPurple)),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.deepPurpleAccent.withOpacity(0.1),
+                        ),
+                        child: const Icon(Icons.add, color: Colors.deepPurple),
+                      ),
                       children: const [
                         Padding(
                           padding: EdgeInsets.symmetric(
@@ -221,30 +228,36 @@ class HomePage extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 1,
-                              blurRadius: 10)
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ExpansionTile(
-                      title: const Text('Work experience',
+                      title: const Text(
+                        'Work experience',
                         style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),),
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       backgroundColor: Colors.white,
                       leading: Image.asset(
                         'assets/images/bag.png',
                         height: 30,
                       ),
                       trailing: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.deepPurpleAccent.withOpacity(0.1)),
-                          child:
-                              const Icon(Icons.add, color: Colors.deepPurple)),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.deepPurpleAccent.withOpacity(0.1),
+                        ),
+                        child: const Icon(Icons.add, color: Colors.deepPurple),
+                      ),
                       children: const [
                         Padding(
                           padding: EdgeInsets.symmetric(
@@ -262,30 +275,35 @@ class HomePage extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 1,
-                              blurRadius: 10)
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ExpansionTile(
-                      title: const Text('Education',
+                      title: const Text(
+                        'Education',
                         style: TextStyle(
                             color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),),
+                            fontWeight: FontWeight.w600),
+                      ),
                       backgroundColor: Colors.white,
                       leading: Image.asset(
                         'assets/images/student.png',
                         height: 30,
                       ),
                       trailing: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.deepPurpleAccent.withOpacity(0.1)),
-                          child:
-                              const Icon(Icons.add, color: Colors.deepPurple)),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.deepPurpleAccent.withOpacity(0.1),
+                        ),
+                        child: const Icon(Icons.add, color: Colors.deepPurple),
+                      ),
                       children: const [
                         Padding(
                           padding: EdgeInsets.symmetric(
@@ -303,30 +321,35 @@ class HomePage extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 1,
-                              blurRadius: 10)
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ExpansionTile(
-                      title: const Text('Skill',
+                      title: const Text(
+                        'Skill',
                         style: TextStyle(
                             color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),),
+                            fontWeight: FontWeight.w600),
+                      ),
                       backgroundColor: Colors.white,
                       leading: Image.asset(
                         'assets/images/connect.png',
                         height: 30,
                       ),
                       trailing: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.deepPurpleAccent.withOpacity(0.1)),
-                          child:
-                              const Icon(Icons.add, color: Colors.deepPurple)),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.deepPurpleAccent.withOpacity(0.1),
+                        ),
+                        child: const Icon(Icons.add, color: Colors.deepPurple),
+                      ),
                       children: const [
                         Padding(
                           padding: EdgeInsets.symmetric(
@@ -344,30 +367,35 @@ class HomePage extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 1,
-                              blurRadius: 10)
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ExpansionTile(
-                      title: const Text('Language',
+                      title: const Text(
+                        'Language',
                         style: TextStyle(
                             color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),),
+                            fontWeight: FontWeight.w600),
+                      ),
                       backgroundColor: Colors.white,
                       leading: Image.asset(
                         'assets/images/translate.png',
                         height: 30,
                       ),
                       trailing: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.deepPurpleAccent.withOpacity(0.1)),
-                          child:
-                              const Icon(Icons.add, color: Colors.deepPurple)),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.deepPurpleAccent.withOpacity(0.1),
+                        ),
+                        child: const Icon(Icons.add, color: Colors.deepPurple),
+                      ),
                       children: const [
                         Padding(
                           padding: EdgeInsets.symmetric(
@@ -385,30 +413,35 @@ class HomePage extends StatelessWidget {
                     margin:
                         const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                     decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(0.2),
-                              spreadRadius: 1,
-                              blurRadius: 10)
-                        ],
-                        borderRadius: BorderRadius.circular(10)),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          spreadRadius: 1,
+                          blurRadius: 10,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                     child: ExpansionTile(
-                      title: const Text('Appreciation',
+                      title: const Text(
+                        'Appreciation',
                         style: TextStyle(
                             color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),),
+                            fontWeight: FontWeight.w600),
+                      ),
                       backgroundColor: Colors.white,
                       leading: Image.asset(
                         'assets/images/award.png',
                         height: 30,
                       ),
                       trailing: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.deepPurpleAccent.withOpacity(0.1)),
-                          child:
-                              const Icon(Icons.add, color: Colors.deepPurple)),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.deepPurpleAccent.withOpacity(0.1),
+                        ),
+                        child: const Icon(Icons.add, color: Colors.deepPurple),
+                      ),
                       children: const [
                         Padding(
                           padding: EdgeInsets.symmetric(
@@ -428,9 +461,12 @@ class HomePage extends StatelessWidget {
           /// Bottom navigation bar
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 10)
-            ]),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 10)
+              ],
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
