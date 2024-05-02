@@ -19,6 +19,15 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  final List<Map<String, dynamic>> options = const [
+    {'title': 'About me', 'icon': 'user'},
+    {'title': 'Work experience', 'icon': 'bag'},
+    {'title': 'Education', 'icon': 'student'},
+    {'title': 'Skill', 'icon': 'connect'},
+    {'title': 'Language', 'icon': 'translate'},
+    {'title': 'Appreciation', 'icon': 'award'},
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -176,282 +185,53 @@ class HomePage extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  /// About me
+                  /// Options
                   const SizedBox(height: 15),
-                  Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 10,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10),
+                  for (int i = 0; i < 6; i++)
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 5),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.1),
+                            spreadRadius: 1,
+                            blurRadius: 10,
+                          )
+                        ],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: ExpansionTile(
+                        title: Text(
+                          options[i]['title'],
+                          style: const TextStyle(
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        backgroundColor: Colors.white,
+                        leading: Image.asset(
+                          'assets/images/${options[i]['icon']}.png',
+                          height: 30,
+                        ),
+                        trailing: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.deepPurpleAccent.withOpacity(0.1),
+                          ),
+                          child:
+                              const Icon(Icons.add, color: Colors.deepPurple),
+                        ),
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 20.0, vertical: 20),
+                            child: Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
+                          ),
+                        ],
+                      ),
                     ),
-                    child: ExpansionTile(
-                      title: const Text(
-                        'About me',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      backgroundColor: Colors.white,
-                      leading: Image.asset(
-                        'assets/images/user.png',
-                        height: 30,
-                      ),
-                      trailing: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.deepPurpleAccent.withOpacity(0.1),
-                        ),
-                        child: const Icon(Icons.add, color: Colors.deepPurple),
-                      ),
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 20),
-                          child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  /// Work Experience
-                  Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 10,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ExpansionTile(
-                      title: const Text(
-                        'Work experience',
-                        style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      backgroundColor: Colors.white,
-                      leading: Image.asset(
-                        'assets/images/bag.png',
-                        height: 30,
-                      ),
-                      trailing: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.deepPurpleAccent.withOpacity(0.1),
-                        ),
-                        child: const Icon(Icons.add, color: Colors.deepPurple),
-                      ),
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 20),
-                          child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  /// Education
-                  Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 10,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ExpansionTile(
-                      title: const Text(
-                        'Education',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      backgroundColor: Colors.white,
-                      leading: Image.asset(
-                        'assets/images/student.png',
-                        height: 30,
-                      ),
-                      trailing: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.deepPurpleAccent.withOpacity(0.1),
-                        ),
-                        child: const Icon(Icons.add, color: Colors.deepPurple),
-                      ),
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 20),
-                          child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  /// Skill
-                  Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 10,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ExpansionTile(
-                      title: const Text(
-                        'Skill',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      backgroundColor: Colors.white,
-                      leading: Image.asset(
-                        'assets/images/connect.png',
-                        height: 30,
-                      ),
-                      trailing: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.deepPurpleAccent.withOpacity(0.1),
-                        ),
-                        child: const Icon(Icons.add, color: Colors.deepPurple),
-                      ),
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 20),
-                          child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  /// Language
-                  Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 10,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ExpansionTile(
-                      title: const Text(
-                        'Language',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      backgroundColor: Colors.white,
-                      leading: Image.asset(
-                        'assets/images/translate.png',
-                        height: 30,
-                      ),
-                      trailing: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.deepPurpleAccent.withOpacity(0.1),
-                        ),
-                        child: const Icon(Icons.add, color: Colors.deepPurple),
-                      ),
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 20),
-                          child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  /// Appreciation
-                  Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.2),
-                          spreadRadius: 1,
-                          blurRadius: 10,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ExpansionTile(
-                      title: const Text(
-                        'Appreciation',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w600),
-                      ),
-                      backgroundColor: Colors.white,
-                      leading: Image.asset(
-                        'assets/images/award.png',
-                        height: 30,
-                      ),
-                      trailing: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.deepPurpleAccent.withOpacity(0.1),
-                        ),
-                        child: const Icon(Icons.add, color: Colors.deepPurple),
-                      ),
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 20),
-                          child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit in leo et mollis. Quisque vehicula a nisl nec vehicula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'),
-                        ),
-                      ],
-                    ),
-                  ),
                   const SizedBox(height: 10),
                 ],
               ),
